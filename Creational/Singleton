@@ -1,0 +1,59 @@
+/** eager initialization - create instance at the time of class loading **/
+
+class Singlton {
+//eager initialization
+private static Singlton s1 = new Singlton();
+
+private Singlton() { }
+
+public static Singlton getInstance () {
+return s1;
+} 
+
+public void display() {
+SOP ("Hi");
+}
+}
+
+class Test {
+main() {
+Singlton s2 = Singlton.getInstance();
+s2.display();
+}
+}
+
+/** lazy initialization - create instance when required **/
+
+class Singlton {
+private static Singlton s1;
+
+private Singlton() { }
+
+public static Singlton getInstance () {
+if(s1 == null)
+{
+   // lazy initialization
+     synchronized(Singlton.class)
+    {
+        // chk again for null as till above null checking many threads can come
+    if(s1 == null) {
+        s1 = new Singlton();
+    }
+  }
+}
+     return s1;
+} 
+
+public void display() {
+SOP ("Hi");
+}
+}
+
+class Test {
+main() {
+Singlton s2 = Singlton.getInstance();
+s2.display();
+}
+}
+
+
