@@ -1,0 +1,42 @@
+public interface Shape {
+  public void draw() {}
+}
+
+// concrete class/sub class
+public class Circle implements Shape {
+  public void draw() {
+    SOP("it's a circle");
+  }
+}
+
+// concrete class/sub class
+public class Square implements Shape {
+  public void draw() {
+    SOP("it's a square");
+  }
+}
+
+public class ShapeFactory{
+// shape interface has this method for object creation 
+  public Shape getShape(String shapename){
+    if(shapename == null){
+      return null;
+    }
+    if(shapename.equlasIgnoreCase('circle')){
+      return new circle();
+    }
+    if(shapename.equlasIgnoreCase('square')){
+        return new square();
+    }
+  }
+}
+
+class Test{
+  main(){
+    // call  cirecles' draw method
+    ShapeFactory s1 = new ShapeFactory();
+    Shape s = s1.getShape('circle');
+    s.draw();
+  }
+}
+
