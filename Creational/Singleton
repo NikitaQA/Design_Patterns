@@ -1,4 +1,6 @@
-// e.g a single DB connection shared by multiple objects as creating a separate DB connection for every object may be costly.
+// e.g 1.  a single DB connection shared by multiple objects as creating a separate DB connection for every object may be costly.
+2. Single printer creating it's own object for printing multiple applications docs. Those applications using printer object to print docs.
+Can queued next doc until first one prints then reuse obj by other one to print doc.
 
 /** eager initialization - create instance at the time of class loading **/
 
