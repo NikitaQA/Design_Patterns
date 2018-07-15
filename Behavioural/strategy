@@ -1,3 +1,8 @@
+// e.g suppose, I want to encrypt data, my hard disk 2 GB. I have 2 strategy, if wanna encrypt 1GB data then read it first and then encrypt.
+suppose, I have 4GB data then ghave to read part by part and encerypt part by part.
+https://stackoverflow.com/questions/370258/real-world-example-of-the-strategy-pattern
+
+
 public interface Strategy {
    public int doOperation(int num1, int num2);
 }
