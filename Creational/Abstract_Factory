@@ -1,3 +1,7 @@
+e.g suppose there are different sources to save client data like can save in xml format or sql format. so, create seperate factories for
+storing xml data, sql data. but here, instead of accessing these factories directly create abstract factory which provides these factories based
+on choice so that can hide implementation details. data source cud be anything but client way of accessing data, shudn't change.
+
 public interface Shape {
    void draw();
 }
