@@ -1,6 +1,8 @@
 // e.g 1.  a single DB connection shared by multiple objects as creating a separate DB connection for every object may be costly.
 2. Single printer creating it's own object for printing multiple applications docs. Those applications using printer object to print docs.
 Can queued next doc until first one prints then reuse obj by other one to print doc.
+3. Logging - multiple application (error,debug,warning logs) logged in at the same time then may occur error, hence use single object so that
+one by one every application can logged in in file and then print clear msg. 
 
 /** eager initialization - create instance at the time of class loading **/
 
