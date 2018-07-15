@@ -1,3 +1,6 @@
+// lets say I m working on SQLServer today. tomorrow will change db insted using oracle. If i have used factory pattern earlier then have to make
+changes to factory class only instead of making changes in every other class.
+
 public interface Shape {
   public void draw() {}
 }
