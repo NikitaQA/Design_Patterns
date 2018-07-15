@@ -1,3 +1,5 @@
+// sequential access of elements . e.g next , previous buttons on tv.
+
 public interface Iterator {
    public boolean hasNext();
    public Object next();
